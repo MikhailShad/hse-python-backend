@@ -50,7 +50,7 @@ CredentialsDep = Annotated[HTTPBasicCredentials, Depends(security)]
 
 
 def requires_author(
-    credentials: CredentialsDep, user_service: UserServiceDep
+        credentials: CredentialsDep, user_service: UserServiceDep
 ) -> UserEntity:
     entity = user_service.get_by_username(credentials.username)
 
